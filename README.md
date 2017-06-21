@@ -38,7 +38,7 @@
 * 使用 Docker 快速启动
     1. [准备docker环境](readmore/install%20docker.md)和[docker-compose](https://docs.docker.com/compose/install/)
     2. `mvn clean package` 打包项目及 Docker 镜像(若是ubuntu，请加上sudo，以下皆同）
-    3. 在项目根目录下运行`sh run.sh`(内部执行 `docker-compose up -d`)
+    3. 在项目根目录下运行`sh run.sh`(内部执行了`docker-compose up -d`，容器本身很快就启动了，通过`docker ps`查看，但要等几分钟所有服务完成启动并在注册中心看到)
 * 本地手动启动
     1. 配置 rabbitmq
     2. 修改 hosts 将主机名指向到本地   
