@@ -37,7 +37,7 @@
 
 * 使用 Docker 快速启动
     1. [准备docker环境](readmore/install%20docker.md)和[docker-compose](https://docs.docker.com/compose/install/)
-    2. `mvn clean package` 打包项目及 Docker 镜像
+    2. `mvn clean package` 打包项目及 Docker 镜像(若是ubuntu，请加上sudo，以下皆同）
     3. 在项目根目录下运行`sh run.sh`(内部执行 `docker-compose up -d`)
 * 本地手动启动
     1. 配置 rabbitmq
@@ -80,7 +80,7 @@
 ### Hystrix 面板
 ![monitor](screenshots/monitor12.jpg)
 ## 链路跟踪
-访问 http://DOCKER-HOST:9411/ 默认账号 admin，密码 admin
+访问 http://DOCKER-HOST:9411/ 
 ### 控制面板
 ![zipkin](screenshots/zipkin1.jpg)
 ### 链路跟踪明细

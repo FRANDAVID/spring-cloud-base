@@ -8,13 +8,13 @@ set -e
 DOCKER_IP=127.0.0.1
 
 # Remove existing containers
-sudo docker-compose stop
-sudo docker-compose rm -f
+docker-compose stop
+docker-compose rm -f
 
-sudo docker-compose up -d rabbitmq
+docker-compose up -d rabbitmq
 
 # Start the discovery service next and wait
-sudo docker-compose up -d registry
+docker-compose up -d registry
 
 while [ -z ${DISCOVERY_SERVICE_READY} ]; do
   echo "Waiting for registry service..."
@@ -25,7 +25,7 @@ while [ -z ${DISCOVERY_SERVICE_READY} ]; do
 done
 
 # Start the config service first and wait for it to become available
-sudo docker-compose up -d config
+docker-compose up -d config
 
 while [ -z ${CONFIG_SERVICE_READY} ]; do
   echo "Waiting for config service..."
@@ -36,7 +36,7 @@ while [ -z ${CONFIG_SERVICE_READY} ]; do
 done
 
 # Start the other containers
-sudo docker-compose up -d
+docker-compose up -d
 
 # Attach to the log output of the cluster
-sudo docker-compose logs
+docker-compose logs

@@ -10,7 +10,7 @@ eureka:
     fetchRegistry: false
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-	  
+
 management.security.enabled: false
 # security:
   # user:
