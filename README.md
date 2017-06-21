@@ -15,6 +15,7 @@
 * Spring Cloud Stream - Spring 数据流操作开发包，封装了与 Redis、Rabbit、Kafka 等发送接收消息。
 * Feign - Feign 是一种声明式、模板化的 HTTP 客户端。[进一步了解Netflix Feign](readmore/netflix%20feign%20basic.md)
 * Spring Cloud OAuth2 - 基于 Spring Security 和 OAuth2 的安全工具包，为你的应用程序添加安全控制**（出于简单考虑，本框架不加入该组件）**。
+
 # 应用架构
 
 该项目包含 7 个服务
