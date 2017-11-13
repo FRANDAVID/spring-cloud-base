@@ -1,10 +1,10 @@
 eureka:
   instance:
-    hostname: registry
+    hostname: localhost
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://registry:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
 
 hystrix:
   command:
@@ -20,7 +20,7 @@ ribbon:
 
 spring:
   rabbitmq:
-    host: rabbitmq
+    host: localhost
   sleuth:
     sampler:
       percentage: 1
